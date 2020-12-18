@@ -1,0 +1,9 @@
+.formInputs {
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+}
+
+.singleInput {
+    margin: 2px;
+}

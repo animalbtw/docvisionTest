@@ -1,0 +1,19 @@
+.wrapper {
+    display: flex;
+}
+
+.button {
+    padding: 10px;
+    min-width: 120px;
+    background: #C4C4C4;
+    border: 1px solid #FFF5EA;
+}
+
+.selectRoom {
+    margin-left: 10px;
+    height: 100%;
+}
+
+.button:active {
+    background: #F7DAD9;
+}

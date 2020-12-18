@@ -1,0 +1,25 @@
+.mainWrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.buttonsChecker {
+    display: flex;
+    flex-direction: row;
+}
+
+.singleButtonCheck {
+    margin: 0 2px 0 2px;
+    padding: 10px;
+}
+
+.items {
+
+}
+
+.singleItem {
+    display: flex;
+    margin: 5px;
+
+}
