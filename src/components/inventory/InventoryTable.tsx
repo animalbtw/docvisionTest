@@ -9,6 +9,7 @@ interface Props {
 
 function InventoryTable({chosenRoom, selected}: Props) {
     const [inventory, setInventory] = React.useState<Array<any>>([])
+    const [count, setCount] = React.useState<string>('')
     console.log(chosenRoom)
     React.useEffect(() => {
         FIRE.firestore().collection("inventory")
@@ -32,7 +33,7 @@ function InventoryTable({chosenRoom, selected}: Props) {
 
     const onEdit = (id: string) => {
         FIRE.firestore().collection("inventory").doc(id).set({
-            count: 1
+            count: count
         }).then(() => {
             console.info('Done')
         })
@@ -61,7 +62,9 @@ function InventoryTable({chosenRoom, selected}: Props) {
                     </div>
                 ))
             }
-            <AddItemToInventory selected={selected} place={chosenRoom}/>
+            <AddItemToInventory
+                place={chosenRoom}
+                count={setCount}/>
         </div>
     )
 }

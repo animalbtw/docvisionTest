@@ -4,10 +4,10 @@ import FIRE from "../../firebase/fire";
 
 interface Props {
     place: string,
-    selected: string
+    count: (count: string) => void,
 }
 
-function AddItemToInventory({ place, selected }: Props) {
+function AddItemToInventory({ place, count }: Props) {
     const formState = {
         name: '',
         count: '',
@@ -21,7 +21,7 @@ function AddItemToInventory({ place, selected }: Props) {
             count: item.count,
             place: filestore.collection("places").doc(place)
         })
-
+        count(item.count)
     }
 
     const inputChange = (event: any) => {
